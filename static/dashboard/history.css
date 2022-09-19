@@ -1,0 +1,36 @@
+
+.table{
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+table{
+    width: 100%;
+    margin-top: 40px;
+    overflow-x:scroll;
+}
+td{
+    text-align: center;
+    padding: 8px;
+}
+th{
+    text-align: center;
+    padding: 8px;
+}
+tr{
+    color: #166fa3;
+}
+tr th{
+    color:#1896df;
+}
+th, td {
+    border-bottom: 1px solid #ddd;
+  }
+@media screen and (min-width:728px) {
+    td{
+        text-align: center;
+        padding: 12px;
+    }
+}
