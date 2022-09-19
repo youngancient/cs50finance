@@ -230,6 +230,7 @@ def quotes(request):
                     stock.industry = stock_info['industry']
                     stock.country = stock_info['country']
                     stock.logo_url = stock_info['logo_url']
+                    stock.updated = datetime.datetime.now()
                     name = request.user.username
                     user = User.objects.get(username=name)
                     stock.save();
