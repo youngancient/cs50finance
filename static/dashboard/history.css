@@ -1,16 +1,4 @@
 
-.table{
-    padding: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-}
-table{
-    width: 100%;
-    margin-top: 40px;
-    overflow-x:scroll;
-}
 td{
     text-align: center;
     padding: 8px;
@@ -32,5 +20,8 @@ th, td {
     td{
         text-align: center;
         padding: 12px;
+    }
+    .table{
+        margin-top: 40px;
     }
 }

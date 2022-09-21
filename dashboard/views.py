@@ -189,8 +189,16 @@ def history(request):
     user = request.user
     user = User.objects.get(username=user.username)
     transactions = user.historys.all()
+    num = len(transactions)
+    if request.method == "POST":
+        choice = request.POST['choice']
+        if choice == 'yes':
+            user.historys.all().delete()
+            transactions = user.historys.all()
+            num = len(transactions)
     return render(request, 'dashboard/history.html', context={
         'transactions':transactions,
+        'num':num
     })
 
 

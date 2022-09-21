@@ -12,9 +12,15 @@
 {% block main %}
 
     {% if messages %}
-        {% for message in messages %}
-        <p class="{{ message.tags }} show django-message">{{ message }}</p>
+        {% for message in messages %} 
+        <div class="ptag">
+            <p class="{{ message.tags }} show django-message message-bg">{{ message }}</p>
+        </div>
         {% endfor %}
+        {% else %}
+        <div class="ptag">
+            <p class="show django-message message-bg">Check Out a Stock Now!</p>
+        </div>
     {% endif %}
 
     <form novalidate action="{% url 'dashboard:quotes' %}" method="POST">

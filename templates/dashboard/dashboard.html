@@ -14,7 +14,7 @@
     {% if messages %}
         {% for message in messages %}
         <div class="ptag">
-            <p class="{{ message.tags }} show django-message" style="background-color: hsla(0,0,0%,0.1);">{{ message }}</p>
+            <p class="{{ message.tags }} show django-message message-bg">{{ message }}</p>
         </div>
         {% endfor %}
     {% endif %}

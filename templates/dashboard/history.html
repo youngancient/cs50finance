@@ -13,7 +13,9 @@
 
     {% if messages %}
         {% for message in messages %}
-        <p class="{{ message.tags }} show django-message">{{ message }}</p>
+        <div class="ptag">
+            <p class="{{ message.tags }} show django-message message-bg">{{ message }}</p>
+        </div>
         {% endfor %}
     {% endif %}
     <div class="table">
@@ -49,4 +51,20 @@
               </tbody>
         </table>
     </div>
+    {% if num >= 1 %}
+    <form class="" method="POST" action="{% url 'dashboard:history' %}">
+        {% csrf_token %}
+        <input type="hidden" id="choice" name="choice" value="no">
+        <button style="margin-top: 0;">Clear History</button>
+    </form>
+    <div class="after hide">
+        <div class="choice">
+            <p>Do your really want to clear all?</p>
+            <p class="button"><button style="color: red;" value="yes" id="yes">Yes</button> <button style="color: blue;" value="no" id="no">No</button></p>
+        </div>
+    </div>
+    {% endif %}
+{% endblock %}
+{% block scripts %}
+    <script src="{% static 'dashboard/history.js' %}"></script>
 {% endblock %}
