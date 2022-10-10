@@ -57,10 +57,11 @@
         <input type="hidden" id="choice" name="choice" value="no">
         <button style="margin-top: 0;">Clear History</button>
     </form>
-    <div class="after hide">
+    <div class="after">
+        <div class="nothing bdr" onclick="removeChoice()"></div>
         <div class="choice">
             <p>Do your really want to clear all?</p>
-            <p class="button"><button style="color: red;" value="yes" id="yes">Yes</button> <button style="color: blue;" value="no" id="no">No</button></p>
+            <p class="button"><button value="yes" id="yes">Yes</button> <button value="no" id="no">No</button></p>
         </div>
     </div>
     {% endif %}

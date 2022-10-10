@@ -1,12 +1,15 @@
 const form = document.querySelector("form");
+const div = document.querySelector("main .after");
+const choice = document.querySelector(".after .choice");
 
 function showChoice(){
-    const div = document.querySelector("main .after");
-  div.classList.remove('hide');
+    div.style.visibility = 'visible';
+    choice.style.transform = 'scale(1)';
+    console.log(true)
 }
 function removeChoice(){
-    const div = document.querySelector("main .after");
-  div.classList.add('hide');
+    div.style.visibility = 'hidden';
+    choice.style.transform = 'scale(0.1)';
 }
 form.addEventListener('submit', (e)=>{
     showChoice();

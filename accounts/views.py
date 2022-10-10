@@ -37,7 +37,7 @@ def register(request):
             #     return redirect('accounts:register')
 
     return render(request,'accounts/register.html')
-
+# yfinance, django-heroku
 
 
 def login(request):
